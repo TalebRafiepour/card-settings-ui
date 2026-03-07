@@ -187,7 +187,7 @@ class SettingsTile<T> extends AbstractSettingsTile {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          DefaultTextStyle(
+          DefaultTextStyle.merge(
             style: TextStyle(
               color: enabled
                   ? Theme.of(context).colorScheme.onSurface
@@ -199,7 +199,7 @@ class SettingsTile<T> extends AbstractSettingsTile {
           ),
           if (description != null) ...[
             const SizedBox(height: 2),
-            DefaultTextStyle(
+            DefaultTextStyle.merge(
               style: TextStyle(
                 color: enabled
                     ? Theme.of(context).hintColor
@@ -256,7 +256,7 @@ class SettingsTile<T> extends AbstractSettingsTile {
         if (value != null)
           Padding(
             padding: const EdgeInsets.only(right: 16),
-            child: DefaultTextStyle(
+            child: DefaultTextStyle.merge(
               style: TextStyle(
                 color: enabled
                     ? Theme.of(context).hintColor

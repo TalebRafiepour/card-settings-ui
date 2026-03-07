@@ -28,7 +28,7 @@ class SettingsSection extends AbstractSettingsSection {
           if (title != null)
             Padding(
               padding: const EdgeInsets.all(10),
-              child: DefaultTextStyle(
+              child: DefaultTextStyle.merge(
                 style: TextStyle(
                   fontSize: 13,
                   color: Theme.of(context).colorScheme.onPrimaryContainer,
@@ -41,7 +41,7 @@ class SettingsSection extends AbstractSettingsSection {
           if (bottomInfo != null)
             Padding(
               padding: const EdgeInsets.all(10),
-              child: DefaultTextStyle(
+              child: DefaultTextStyle.merge(
                 style: TextStyle(
                   fontSize: 13,
                   color: Theme.of(context).hintColor,
