@@ -165,7 +165,7 @@ class SettingsTile<T> extends AbstractSettingsTile {
 
   Widget buildLeading(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 16.0),
+      padding: const EdgeInsetsDirectional.only(start: 16.0),
       child: IconTheme.merge(
         data: IconThemeData(
           color: enabled
@@ -220,12 +220,12 @@ class SettingsTile<T> extends AbstractSettingsTile {
       children: [
         if (trailing != null)
           Padding(
-            padding: const EdgeInsets.only(right: 16),
+            padding: const EdgeInsetsDirectional.only(end: 16),
             child: trailing!,
           ),
         if (tileType == SettingsTileType.switchTile)
           Padding(
-            padding: const EdgeInsets.only(right: 12),
+            padding: const EdgeInsetsDirectional.only(end: 12),
             child: Transform.scale(
               scale: 0.85,
               child: Switch(
@@ -237,7 +237,7 @@ class SettingsTile<T> extends AbstractSettingsTile {
           ),
         if (tileType == SettingsTileType.checkboxTile)
           Padding(
-            padding: const EdgeInsets.only(right: 12),
+            padding: const EdgeInsetsDirectional.only(end: 12),
             child: Checkbox(
               tristate: true,
               value: initialValue,
@@ -246,7 +246,7 @@ class SettingsTile<T> extends AbstractSettingsTile {
           ),
         if (tileType == SettingsTileType.radioTile)
           Padding(
-            padding: const EdgeInsets.only(right: 12),
+            padding: const EdgeInsetsDirectional.only(end: 12),
             child: Radio<T>(
               value: radioValue,
               groupValue: groupValue,
@@ -255,7 +255,7 @@ class SettingsTile<T> extends AbstractSettingsTile {
           ),
         if (value != null)
           Padding(
-            padding: const EdgeInsets.only(right: 16),
+            padding: const EdgeInsetsDirectional.only(end: 16),
             child: DefaultTextStyle.merge(
               style: TextStyle(
                 color: enabled
